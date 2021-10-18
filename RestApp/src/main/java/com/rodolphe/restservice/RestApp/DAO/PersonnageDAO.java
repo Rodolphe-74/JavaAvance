@@ -7,5 +7,7 @@ import java.util.List;
 public interface PersonnageDAO {
     public List<Personnage> findAll();
     public Personnage findById(int id);
-    public Personnage save(Personnage personnage);
+    public void save(Personnage personnage);
+    public void delete(int id);
+ //   public Personnage add(Personnage personnage);
 }

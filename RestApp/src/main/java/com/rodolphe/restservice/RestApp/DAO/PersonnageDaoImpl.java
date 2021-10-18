@@ -1,4 +1,4 @@
-package com.rodolphe.restservice.RestApp.model;
+package com.rodolphe.restservice.RestApp.DAO;
 
 import com.rodolphe.restservice.RestApp.DAO.PersonnageDAO;
 import com.rodolphe.restservice.RestApp.model.Personnage;
@@ -32,9 +32,18 @@ public class PersonnageDaoImpl implements PersonnageDAO {
     }
 
     @Override
-    public Personnage save(Personnage personnage) {
+    public void save(Personnage personnage) {
         personnages.add(personnage);
-        return null;
     }
+
+    @Override
+    public void delete(int id) {
+        personnages.removeIf(personnage -> personnage.getId() == id);
+    }
+
+//    @Override
+//    public Personnage add(Personnage personnage) {
+//        return null;
+//    }
 
 }
