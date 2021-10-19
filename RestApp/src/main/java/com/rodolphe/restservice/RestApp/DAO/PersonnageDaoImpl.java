@@ -41,9 +41,4 @@ public class PersonnageDaoImpl implements PersonnageDAO {
         personnages.removeIf(personnage -> personnage.getId() == id);
     }
 
-//    @Override
-//    public Personnage add(Personnage personnage) {
-//        return null;
-//    }
-
 }
